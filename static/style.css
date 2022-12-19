@@ -1,0 +1,64 @@
+body {
+margin: 0;
+padding: 0;
+font: 14pt Calibri, Verdana;
+color: #444;
+text-align: center;
+}
+.home {
+text-align: center;
+}
+h3 {
+text-align: center;
+font-size: 1.7em;
+}
+.result {
+text-align: center;
+}
+.about {
+text-align: center;
+}
+.link {
+text-decoration: none;
+}
+.nav{
+padding: 0 50px;
+height: 60px;
+background-color: #000000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.menu {
+list-style: none;
+height: 100%;
+display: flex;
+align-items: center;
+}
+.menu a {
+color: white;
+padding: 0 25px;
+}
+ul {
+list-style: none;
+margin: 0;
+padding-left: 0;
+}
+.container_about{
+    padding-left: 50px;
+    padding-bottom: 53px;
+    padding-right: 50px;
+    text-align: center;
+    background-color: #FFFFFF;
+
+}
+.block_contacts{
+    padding: 0 54px 54px 54px;
+    text-align: center;
+}
+.text_contacts{
+    padding-bottom: 10px;
+    font-weight: 300;
+    font-size: 20px;
+}

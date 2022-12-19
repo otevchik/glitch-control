@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}Результат{% endblock %}
+
+{% block content %}
+<h3>{{ company }}</h3>
+<p class="result">Цена за акцию на данный момент - {{ price }}$</p>
+<p class="result">Дневной диапазон - {{ dailyRange }}$</p>
+{% if c != 1 %}
+<p class="result">Ожидаемая цена на конец года - {{ targetEst }}$</p>
+<p class="result">Если купить акцию по нынешней цене, то в конце года вы возможно заработаете {{ income }}$</p>
+{% endif %}
+{% if c == 1 %}
+<p class="result">Ожидаемая цена на конец года - {{ targetEst }}</p>
+{% endif %}
+<h4 class="result">Стоимость акций за последний месяц</h4>
+<img style="height: 75%; width: 75%; margin: 10px auto 20px;" src="data:image/png;base64, {{ picture }}">
+{% if f != 1 %}
+<h4 class="result">Ведущие институциональные держатели</h4>
+<img style="height: 75%; width: 75%; margin: 10px auto 20px;" src="data:image/png;base64, {{ picture2 }}">
+{% endif %}
+{% if f == 1 %}
+<h4 class="result">Данные о ведущих институциональных держателях отсутствуют</h4>
+{% endif %}
+{% endblock %}}

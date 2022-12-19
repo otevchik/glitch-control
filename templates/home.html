@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}Начальная страница{% endblock %}
+
+{% block content %}
+    <h1 class="home">Анализ акций</h1>
+    <h4 class="home">Для того, чтобы воспользоваться функционалом, вам надо ввести тикер компании, вы можете его найти
+    введя в поисковике название нужной вам компании (на английском) и добавив слово stock или stocks <a style="text-decoration: none; color: red;" href="{{ url_for('ticker') }}">(пример тикеров)</a></h4>
+
+    <form class="home" action="{{ url_for('result') }}" method="post">
+        <p class="home">
+            <label for="name">Введите тикер нужной вам компании: </label>
+            <input type="text" name="name" value="" required>
+        </p>
+        {% if b is string %}
+        <p inline style="color: red">Такого тикера не существует</p>
+        {% endif %}
+        <input type="submit">
+    </form>
+<br>
+{% endblock %}}
